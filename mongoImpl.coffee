@@ -3,7 +3,7 @@
 module.exports = new class MongoImpl
 
 	connect: (callback) ->
-		client = new Db("test", new Server("mut8ed.com", 27017, {}), w: 1)
+		client = new Db("test", new Server("localhost", 27017, {}), w: 1)
 		
 		client.open (err) =>
 			if err
